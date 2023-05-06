@@ -23,3 +23,13 @@ def pick_random_keys(dictionary, excluded_keys, num_keys):
     available_keys = [key for key in dictionary.keys() if key not in excluded_keys]
     random_keys = random.sample(available_keys, num_keys)
     return random_keys
+
+'''Function for turning the text into lowercase expression'''
+def lower_processing(data, text_type):
+    if text_type == "claim_text":
+        for i in data:
+            data[i][text_type] = data[i][text_type].lower()
+    else:
+        for i in data:
+            data[i] = data[i].lower()
+    return data
