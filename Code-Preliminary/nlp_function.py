@@ -33,7 +33,3 @@ def lower_processing(data, text_type):
         for i in data:
             data[i] = data[i].lower()
     return data
-
-'''Function for obtaining the most frequent element from a list'''
-def most_frequent_element(nums):
-    return max(set(nums), key=nums.count)
